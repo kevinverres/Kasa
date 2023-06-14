@@ -1,0 +1,28 @@
+.E404-info {
+    height: 100%;
+    color: #FF6060;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.E404-info h1{
+    font-size: 400px;
+    margin: 0;
+}
+.E404-info .return{
+    color: #FF6060;
+    margin-top: 150px;
+}
+@media screen and (max-width: 768px) {
+    .E404-info {
+        margin-top: 150px;
+    }
+   .E404-info h1{
+        font-size: 100px;
+        margin: 0;
+    }
+    .E404-info p {
+        width: 260px;
+        text-align: center;
+    }
+}

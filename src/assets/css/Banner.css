@@ -1,0 +1,41 @@
+.banner {
+    transition: all 0.5s;
+    position: relative;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 30px;
+    height: 223px;
+    width: 85%;
+    overflow: hidden;
+}
+.banner-img {
+    background: url("../img/bannerHome-kasa.webp");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter: brightness(0.5);
+}
+.banner_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 0;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 135px;
+    }
+    .banner_title {
+        width: 90%;
+        margin-left: 1rem;
+    }
+}

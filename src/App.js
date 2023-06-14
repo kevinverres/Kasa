@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route,Routes} from "react-router-dom";
+import Home from './page/Home/Home';
+import House from './page/House/House';
+import Error from './page/Error/Error';
+import logo from "./assets/img/logo.png";
+import logo_footer from "./assets/img/logo_footer.png"
+import About from "./page/About/About";
+const alt = "Le logo de l'agence kasa"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+			<Router>
+				<Routes>
+					<Route path="/" element={<Home 
+						logo = {logo}
+						alt = {alt}
+						logo_footer = {logo_footer}
+					/>} />
+					<Route exact path="/house/:id" element={<House 
+						logo = {logo}
+						alt = {alt}
+						logo_footer = {logo_footer}
+					/>} />
+					<Route exact path="/about" element={<About 
+						logo = {logo}
+						alt = {alt}
+						logo_footer = {logo_footer}
+					/>} />
+					<Route path="*" element={<Error 
+						logo = {logo}
+						alt = {alt}
+					/>} />
+					<Route path="/house/*" element={<Error 
+						logo = {logo}
+						alt = {alt}
+					/>} />
+				</Routes>
+			</Router>
+		</div>
   );
 }
 

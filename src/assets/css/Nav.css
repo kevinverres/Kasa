@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+.Link {
+    color: #FF6060;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+.Link:hover {
+    text-decoration: underline;
+}
+.Link-active {
+    text-decoration: underline;
+}
+.Link-inactive {
+    text-decoration: none;
+}
